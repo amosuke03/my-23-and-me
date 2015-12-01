@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing My23andmes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Disease</th>
+      <th>Gideline</th>
+      <th>Mechanizem</th>
+      <th>Pharmacotherapy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my23andmes.each do |my23andme| %>
+      <tr>
+        <td><%= my23andme.disease %></td>
+        <td><%= my23andme.gideline %></td>
+        <td><%= my23andme.mechanizem %></td>
+        <td><%= my23andme.pharmacotherapy %></td>
+        <td><%= link_to 'Show', my23andme %></td>
+        <td><%= link_to 'Edit', edit_my23andme_path(my23andme) %></td>
+        <td><%= link_to 'Destroy', my23andme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My23andme', new_my23andme_path %>

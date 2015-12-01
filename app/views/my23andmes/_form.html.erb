@@ -1,0 +1,33 @@
+<%= form_for(@my23andme) do |f| %>
+  <% if @my23andme.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@my23andme.errors.count, "error") %> prohibited this my23andme from being saved:</h2>
+
+      <ul>
+      <% @my23andme.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :disease %><br>
+    <%= f.text_field :disease %>
+  </div>
+  <div class="field">
+    <%= f.label :gideline %><br>
+    <%= f.text_area :gideline %>
+  </div>
+  <div class="field">
+    <%= f.label :mechanizem %><br>
+    <%= f.text_area :mechanizem %>
+  </div>
+  <div class="field">
+    <%= f.label :pharmacotherapy %><br>
+    <%= f.text_area :pharmacotherapy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

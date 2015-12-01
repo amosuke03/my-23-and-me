@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Disease:</strong>
+  <%= @my23andme.disease %>
+</p>
+
+<p>
+  <strong>Gideline:</strong>
+  <%= @my23andme.gideline %>
+</p>
+
+<p>
+  <strong>Mechanizem:</strong>
+  <%= @my23andme.mechanizem %>
+</p>
+
+<p>
+  <strong>Pharmacotherapy:</strong>
+  <%= @my23andme.pharmacotherapy %>
+</p>
+
+<%= link_to 'Edit', edit_my23andme_path(@my23andme) %> |
+<%= link_to 'Back', my23andmes_path %>
